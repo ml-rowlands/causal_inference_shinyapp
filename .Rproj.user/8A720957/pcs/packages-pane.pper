@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": true,
+        "libraryPath": "/Users/michaelrowlands/Causal_Inference_App/renv/library/R-4.2/aarch64-apple-darwin20",
+        "installDependencies": true
+    }
+}

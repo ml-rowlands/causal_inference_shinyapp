@@ -1,0 +1,30 @@
+dag_obj <- empty_dag()
+
+# Define nodes
+# Education node (root node)
+dag_obj <- dag_obj + 
+  node(name = "Education", 
+       type = "rbernoulli", 
+       p = 0.6)
+
+# Program node depends on Education
+dag_obj <- dag_obj + 
+  node(name = "Program", 
+       type = "binomial", 
+       parents = "Education",
+       betas = 1.5,
+       intercept = -1)
+
+# Employment node depends on Program and Education
+dag_obj <- dag_obj + 
+  node(name = "Employment", 
+       type = "binomial", 
+       parents = c("Program", "Education"),
+       betas = c(1.0, 1.2),
+       intercept = -2)
+
+# Simulate data
+set.seed(123)
+data <- sim_from_dag(dag_obj, n_sim = 1000)
+
+
