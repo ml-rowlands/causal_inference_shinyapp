@@ -55,7 +55,7 @@ shinyServer(function(input, output, session) {
         title = "Tell us about your interests",
         selectInput("user_field_input", "What field are you interested in?",
                     choices = c("Economics", "Biostatistics/Epidemiology",
-                                "Social Sciences", "Engineering", "Other")),
+                                "Social Sciences")),
         footer = tagList(
           modalButton("Cancel"),
           actionButton("submit_field", "Start Learning")
@@ -112,7 +112,7 @@ shinyServer(function(input, output, session) {
       })
     } else if (user_field() == "Biostatistics/Epidemiology") {
       output$example_content <- renderUI({
-        biostatisticsUI("epi")
+        epiUI("epi")
       })
     } else if (user_field() == "Social Sciences") {
       output$example_content <- renderUI({
@@ -132,7 +132,7 @@ shinyServer(function(input, output, session) {
     if (user_field() == "Economics") {
       economicsServer("economics", analysis_type = analysis_type)
     } else if (user_field() == "Biostatistics/Epidemiology") {
-      biostatisticsServer("epi", analysis_type = analysis_type)
+      epiServer("epi", analysis_type = analysis_type)
     } else if (user_field() == "Social Sciences") {
       socialSciencesServer("social", analysis_type = analysis_type)
     }

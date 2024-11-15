@@ -320,7 +320,7 @@ economicsServer <- function(id, analysis_type) {
           # Extract coefficients for Program
           unadj_program <- unadjusted_coef["Program", ]
           adj_program <- adjusted_coef["Program", ]
-          # Calculate odds ratios
+          # Calculate increase in odds
           unadj_or <- exp(unadj_program["Estimate"])
           adj_or <- exp(adj_program["Estimate"])
           # Combine into a table
@@ -382,7 +382,7 @@ economicsServer <- function(id, analysis_type) {
         p("Interpretation:"),
         p("In the unadjusted model, the odds ratio for Program is ", unadj_or, ", indicating that participating in the program increases the odds of employment by a factor of ", unadj_or, "."),
         p("After adjusting for Education, the odds ratio changes to ", adj_or, ", suggesting that the effect of the program is different when accounting for education."),
-        p("This demonstrates how failing to adjust for confounding variables can lead to misleading conclusions. In this case, without adjusting we overestimate the programs effectiveness! This simple example shows how bad analysis could lead to bad policy. "),
+        p("This demonstrates how failing to adjust for confounding variables can lead to misleading conclusions. In this case, without adjusting we overestimate the program's effectiveness! This simple example shows how bad analysis could lead to bad policy. "),
         p(strong('BUT'), "this does", strong("NOT"), "mean that all you need to do is adjust for every avaliable variable! Keep learning to find out what can go wrong if you do."),
         p("Note: An odds ratio of 1 indicates no effect; values greater than 1 indicate increased odds, and values less than 1 indicate decreased odds."),
         footer = modalButton("Close"),

@@ -18,3 +18,8 @@ Thumbs.db
 # Ignore other temporary files
 *.tmp
 *.swp
+
+
+#Ignore .gitignore
+
+.gitignore
