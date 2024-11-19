@@ -1,4 +1,4 @@
-# Education DAG Learning App
+# DAG Learning App
 
 This Shiny application is designed to teach users about Directed Acyclic Graphs (DAGs) and their use in causal inference, using an examples from various fields where DAGs are primarily used. The app demonstrates how confounding variables, such as age, can bias results if not accounted for in statistical models.
 
