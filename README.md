@@ -19,9 +19,12 @@ This Shiny application is designed to teach users about Directed Acyclic Graphs 
    cd casual_inference_shinyapp
    ```
 
-2. Install required packages in .renv file
+2. Install required packages in .renv file or from this list:
+   ```r
+   install.packages(c('shiny','ggdag','igraph','simDAG','brms','bayesplot','daggity'))
+   ```
 
-4. Run the app in your IDE
+3. Run the app in your IDE
    ```r
    library(shiny)
    runApp()
