@@ -15,7 +15,7 @@ This Shiny application is designed to teach users about Directed Acyclic Graphs 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<your-username>/causal_inference_shinyapp.git
+   git clone https://github.com/ml-rowlands/causal_inference_shinyapp.git
    cd casual_inference_shinyapp
    ```
 
